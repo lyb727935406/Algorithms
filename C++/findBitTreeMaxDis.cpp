@@ -3,7 +3,7 @@
 #include<cstdlib>
 using namespace std;
 
-/*¶þ²æÊ÷´´½¨²Î¿¼£ºhttps://blog.csdn.net/SunnyYoona/article/details/44114577*/ 
+/*äºŒå‰æ ‘åˆ›å»ºå‚è€ƒï¼šhttps://blog.csdn.net/SunnyYoona/article/details/44114577*/ 
 struct TreeNode
 {
 	int val;
@@ -12,21 +12,20 @@ struct TreeNode
 	TreeNode(int x):val(x),left(NULL),right(NULL){}
 }; 
 
-/*´Ë¶þ²æÊ÷ÓÐÒ»¶¨ÎÊÌâ£¬Æä¸ùµÄÓÒ×ÓÊ÷²»¿ÉÒÔÎª¿Õ*/ 
 int createBinaryTree(TreeNode* &root)
 {
 	int data; 
 	cin >> data;
 	if(data != -1)
 	{
-		/*ÉêÇëÄÚ´æÔÚ¶ÑÖÐ£¬º¯Êý·µ»ØºóÈÔ´æÔÚ*/
+		/*ç”³è¯·å†…å­˜åœ¨å †ä¸­ï¼Œå‡½æ•°è¿”å›žåŽä»å­˜åœ¨*/
 		root = new TreeNode(data); 
 		createBinaryTree(root->left);
 		createBinaryTree(root->right);
 	}
 	else
 	{
-		root = NULL; /*ÊäÈë-1±íÊ¾¸Ã½ÚµãÎÞ×Ó½Úµã£¬¼´¿ÕÊ÷*/
+		root = NULL; /*è¾“å…¥-1è¡¨ç¤ºè¯¥èŠ‚ç‚¹æ— å­èŠ‚ç‚¹ï¼Œå³ç©ºæ ‘*/
 	}
 	return 0;
 }
@@ -46,7 +45,7 @@ public:
     int maxDistance(TreeNode* &root) {
     	int ld = 0, rd = 0;
     	int d = tDepth(root->left) + tDepth(root->right);
-    	/*×¢ÒâÅÐ¶Ï¶ù×ÓÎª¿ÕµÄÇé¿ö*/
+    	/*æ³¨æ„åˆ¤æ–­å„¿å­ä¸ºç©ºçš„æƒ…å†µ*/
     	if(root->left!=NULL){
     		ld = tDepth(root->left->left) + tDepth(root->left->right);
 		}
